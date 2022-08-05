@@ -1,0 +1,39 @@
+/* Regular */
+@font-face {
+  font-family: 'BundesSerif';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Regular.eot'),
+  url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Regular.woff') format('woff'),
+  url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Regular.ttf') format('truetype');
+}
+
+/* RegularItalic */
+@font-face {
+  font-family: 'BundesSerif';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../../typo3conf/ext/government_package/Resources/PublicFonts/BundesSerifWeb-Italic.eot'),
+  url("../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Italic.woff") format("woff"),
+  url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Italic.ttf') format('truetype');
+}
+
+/* Bold */
+@font-face {
+  font-family: 'BundesSerif';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Bold.eot'),
+  url("../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Bold.woff") format("woff"),
+  url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-Bold.ttf') format('truetype');
+}
+
+/* BoldItalic */
+@font-face {
+  font-family: 'BundesSerif';
+  font-style: italic;
+  font-weight: bold;
+  src: url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-BoldItalic.eot'),
+  url("../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-BoldItalic.woff") format("woff"),
+  url('../../typo3conf/ext/government_package/Resources/Public/Fonts/BundesSerifWeb-BoldItalic.ttf') format('truetype');
+}

@@ -1,0 +1,5 @@
+########################
+#### BACKENDLAYOUTS ####
+########################
+mod.web_layout.BackendLayouts >
+@import 'EXT:government_package/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'

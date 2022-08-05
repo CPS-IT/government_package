@@ -1,0 +1,9 @@
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/Bootstrap5/setup.typoscript'
+
+@import 'EXT:government_package/Configuration/TypoScript/Components/Setup/Page.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/Environments/*.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/ContentElement/setup.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/Extensions/Setup/*.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/Extensions/Solr/setup.typoscript'

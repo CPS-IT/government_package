@@ -1,0 +1,13 @@
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+    <div class="hero">
+        <div class="hero__image">
+            <f:render partial="Media/Gallery" arguments="{_all}" />
+        </div>
+        <figcaption class="hero__content">
+            <h2 class="content__text content__title">{data.header}</h2>
+            <h3 class="content__text content__subtitle">{data.subheader}</h3>
+        </figcaption>
+    </div>
+</f:section>

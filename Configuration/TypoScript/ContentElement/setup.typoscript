@@ -1,0 +1,6 @@
+@import 'EXT:government_package/Configuration/TypoScript/ContentElement/Element/Shortlink.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/ContentElement/Element/HeroImage.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/ContentElement/Element/Teaser.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/ContentElement/Element/TeaserLinks.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/ContentElement/Element/MenuBoxes.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/ContentElement/Element/TopicSlider.typoscript'

@@ -1,0 +1,99 @@
+plugin.tx_solr.search.faceting = 1
+plugin.tx_solr.search.faceting {
+    minimumCount = 1
+    sortBy = count
+    limit = 10
+    singleFacetMode = 0
+    showEmptyFacets = 1
+    keepAllFacetsOnSelection = 0
+
+    // available place holders: @facetValue, @facetName, @facetLabel, @facetText
+    removeFacetLinkText = @facetLabel: @facetText
+    facets {
+        type {
+            field = type_stringS
+            selectingSelectedFacetOptionRemovesFilter = 1
+            keepAllFacetsOnSelection = 1
+            singleOptionMode = 0
+            showEvenWhenEmpty = 1
+            sortBy = index
+            operator = OR
+
+            renderingInstruction = CASE
+            renderingInstruction {
+                key.field = optionValue
+
+                pages = TEXT
+                pages.value = Page
+                pages.lang.de = Artikel
+
+                news = TEXT
+                news.value = News
+                news.lang.de = News
+            }
+        }
+        age {
+            label = TEXT
+            label.value = Age
+            label.lang.de = Alter
+
+            field = datetime_dateS
+            showEvenWhenEmpty = 0
+            type = queryGroup
+            queryGroup {
+                week {
+                    query = [NOW/DAY-7DAYS TO *]
+                }
+
+                month {
+                    query = [NOW/DAY-1MONTH TO NOW/DAY-7DAYS]
+                }
+
+                halfYear {
+                    query = [NOW/DAY-6MONTHS TO NOW/DAY-1MONTH]
+                }
+
+                year {
+                    query = [NOW/DAY-1YEAR TO NOW/DAY-6MONTHS]
+                }
+
+                old {
+                    query = [* TO NOW/DAY-1YEAR]
+                }
+            }
+
+            renderingInstruction = CASE
+            renderingInstruction {
+
+                label = Age
+                label.lang.de = Aktualität
+
+
+                key.field = optionValue
+
+                default = TEXT
+                default.field = optionValue
+
+                week = TEXT
+                week.value = less then 1 week
+                week.lang.de = Weniger als 1 Woche
+
+                month = TEXT
+                month.value = 1 week to 1 month
+                month.lang.de = 1 Woche - 1 Monat
+
+                halfYear = TEXT
+                halfYear.value = 1 to 6 month
+                halfYear.lang.de = 1 - 6 Monate
+
+                year = TEXT
+                year.value = 6 month to 1 year
+                year.lang.de = 6 Monate - 1 Jahr
+
+                old = TEXT
+                old.value = more than 1 year
+                old.lang.de = älter als 1 Jahr
+            }
+        }
+    }
+}

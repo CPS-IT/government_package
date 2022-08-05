@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-06-01T09:11:39Z"
+    product-name="government_package">
+        <header/>
+        <body>
+            <trans-unit id="shortlink_item">
+                <source>Short link items</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_shortlink_item">
+                <source>Short link item and icon</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_shortlink_item.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_shortlink_item.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_shortlink_item.link_icon">
+                <source>Link icon</source>
+            </trans-unit>
+            <trans-unit id="content_element.shortlink">
+                <source>Short link</source>
+            </trans-unit>
+            <trans-unit id="content_element.shortlink.description">
+                <source>Short link description</source>
+            </trans-unit>
+            <trans-unit id="content_group.government">
+                <source>Government</source>
+            </trans-unit>
+            <trans-unit id="content_element.heroimage">
+                <source>Hero image</source>
+            </trans-unit>
+            <trans-unit id="content_element.heroimage.description">
+                <source>Hero image description</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_teaser">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_teaser.description">
+                <source>Teaser description</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_teaser_links">
+                <source>Teaser and links</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_teaser_links.description">
+                <source>Teaser and links description</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_link_item">
+                <source>Short link item</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_link_item.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_link_item.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_menu_boxes">
+                <source>Menu boxes</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_menu_boxes.description">
+                <source>Menu boxes description</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_teaser_item.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_teaser_item.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tx_governmentpackage_teaser_item.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_topic_slider">
+                <source>Topic slider</source>
+            </trans-unit>
+            <trans-unit id="content_element.government_topic_slider.description">
+                <source>Topic slider</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

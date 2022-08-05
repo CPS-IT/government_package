@@ -1,0 +1,74 @@
+.gallery-row + nav {
+  .pagination {
+    li {
+      &.page-item-next, &.page-item-previous {
+        background-color: $pagination-color;
+        color: $pagination-secondary-color;
+        max-width: 52px;
+        min-width: 52px;
+
+        @include media-breakpoint-up(md) {
+          max-width: unset;
+          min-width: 108px;
+        }
+
+        a {
+          font-weight: 500;
+          color: $pagination-secondary-color !important;
+          text-transform: capitalize;
+          display: flex;
+          flex-wrap: nowrap;
+          column-gap: 20px;
+          align-items: center;
+          overflow: hidden;
+          padding: 8px 15px;
+
+          @include media-breakpoint-up(md) {
+            column-gap: 10px;
+          }
+        }
+      }
+
+      &.page-item-previous a {
+        @include media-breakpoint-up(md) {
+          justify-content: center;
+        }
+
+        &:before {
+          content: '\2190';
+          display: inline-block;
+          font-size: 20px;
+          width: 20px;
+        }
+      }
+
+      &.page-item-next a {
+        justify-content: flex-end;
+
+        @include media-breakpoint-up(md) {
+          justify-content: center;
+        }
+
+        &:after {
+          content: '\2192';
+          font-size: 20px;
+        }
+      }
+
+      &.active {
+        .page-link-title {
+          color: $pagination-secondary-color !important;
+        }
+      }
+
+      &.active:hover {
+        cursor: default;
+
+        a {
+          cursor: default;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

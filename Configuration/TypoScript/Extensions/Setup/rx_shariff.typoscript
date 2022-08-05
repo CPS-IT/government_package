@@ -1,0 +1,2 @@
+@import 'EXT:rx_shariff/Configuration/TypoScript/WithJQuery/setup.typoscript'
+page.includeCSS.tx_rxshariff_shariff >

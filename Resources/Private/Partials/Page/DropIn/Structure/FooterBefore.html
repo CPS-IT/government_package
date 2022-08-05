@@ -1,0 +1,67 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" rx="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  data-namespace-typo3-fluid="true">
+{namespace rx=Reelworx\RxShariff\ViewHelper}
+
+<div class="share-modal">
+    <div class="share-modal__backdrop"></div>
+    <div class="share-modal__box">
+        <button id="share-modal-close-btn" class="share-modal__close-btn"></button>
+        <div class="share-modal__content">
+            <div class="share-modal__title">{f:translate(key: 'share.title', extensionName: 'government_package')}</div>
+            <div class="share-modal__links">
+                <rx:shariff services="facebook,twitter,linkedin,whatsapp,mail"/>
+            </div>
+            <div class="share-modal__copy">
+                <div class="share-modal__copy-wrapper">
+                    <span class="share-modal__copy-content"><f:uri.page absolute="1"/></span>
+                    <button class="share-modal__copy-btn" id="share-copy-btn">
+                        <i class="share-modal__copy-icon"></i>{f:translate(key: 'share.copy', extensionName: 'government_package')}
+                        <span class="share-modal__copy-message">{f:translate(key: 'share.copy_success', extensionName: 'government_package')}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section footer-section footer-section-share d-print-none">
+    <div class="container buttons--container">
+        <div class="btn__wrap">
+            <button id="share-modal-open-btn" class="btn--share" data-target="share-modal"></button>
+        </div>
+        <div class="btn__wrap">
+            <button class="btn--print hidden-print" onclick="myFunction()">
+                <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="section footer-section footer-section-meta d-print-none">
+    <div class="frame frame-background-none frame-space-before-none frame-space-after-none">
+        <div class="frame-group-container">
+            <div class="frame-group-inner">
+                <div class="container">
+                    <div class="frame-inner frame-border-bt">
+                        <div class="footer-top">
+                            <f:cObject typoscriptObjectPath="plugin.tx_solr_PiSearch_Search"/>
+                            <f:if condition="{theme.socialmedia.enable}">
+                                <div class="footer-sociallinks">
+                                    <div class="sociallinks__title">{f:translate(key: 'share.subtitle', extensionName: 'government_package')}</div>
+                                    <f:render partial="Structure/SocialLinks" arguments="{_all}"/>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function myFunction() {
+        window.print();
+    }
+</script>
+
+</html>

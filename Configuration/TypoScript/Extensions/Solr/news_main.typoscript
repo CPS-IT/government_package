@@ -1,0 +1,8 @@
+plugin.tx_solr.index.queue.main_news < plugin.tx_solr.index.queue.news
+
+plugin.tx_solr.index.queue.main_news = 1
+plugin.tx_solr.index.queue.main_news {
+    additionalWhereClause = pid=39
+    fields.url.default.typolink.parameter = 40
+}
+plugin.tx_solr.logging.indexing.queue.main_news = 1

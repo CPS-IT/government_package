@@ -1,0 +1,13 @@
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+plugin.tx_news {
+    settings {
+        detail {
+            showSocialShareButtons = 0
+            media {
+                image {
+                    maxWidth =
+                }
+            }
+        }
+    }
+}

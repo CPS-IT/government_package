@@ -1,0 +1,3 @@
+mod.wizards.newContentElement.wizardItems {
+    government.header = LLL:EXT:government_package/Resources/Private/Language/Backend.xlf:content_group.interactive
+}

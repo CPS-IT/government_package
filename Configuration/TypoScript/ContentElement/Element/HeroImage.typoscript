@@ -1,0 +1,11 @@
+tt_content.heroimage >
+tt_content.heroimage =< lib.contentElement
+tt_content.heroimage {
+    templateName = HeroImage
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+        }
+    }
+}

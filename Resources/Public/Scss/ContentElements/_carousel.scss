@@ -1,0 +1,13 @@
+.carousel {
+  .carousel-content {
+    color: inherit !important;
+
+    a:not([class]) {
+      color: inherit !important;
+    }
+  }
+
+  a:not([class]) {
+    text-decoration: none !important;
+  }
+}

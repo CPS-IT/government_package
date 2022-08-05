@@ -1,0 +1,29 @@
+tt_content.shortlink >
+tt_content.shortlink =< lib.contentElement
+tt_content.shortlink {
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = Shortlink
+    dataProcessing {
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tx_governmentpackage_shortlink_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = link_icon
+                }
+            }
+        }
+
+    }
+}

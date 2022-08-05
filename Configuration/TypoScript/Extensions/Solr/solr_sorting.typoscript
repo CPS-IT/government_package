@@ -1,0 +1,21 @@
+plugin.tx_solr.search.sorting.options >
+
+plugin.tx_solr {
+    search {
+        sorting = 1
+        sorting {
+            defaultOrder = desc
+            options {
+                relevance {
+                    field = relevance
+                    label = Relevanz
+                }
+                date {
+                    field = datetime_dateS
+                    label = Datum
+                }
+            }
+        }
+        #query.sortBy = datetime_dateS desc
+    }
+}

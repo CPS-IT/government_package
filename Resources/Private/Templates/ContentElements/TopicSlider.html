@@ -1,0 +1,74 @@
+<f:layout name="Simple" />
+<f:section name="Main">
+    <div class="topic-slider">
+        <div class="topic__slider__controls controls--arrows">
+            <button class="controls__arrow arrow--prev"></button>
+            <button class="controls__arrow arrow--next"></button>
+        </div>
+        <f:if condition="{data.header}">
+            <h2 class="topic-slider__title">{data.header}</h2>
+        </f:if>
+        <div class="topic-slider__wrapper">
+            <f:if condition="{records}">
+                <ul class="topic-slider__list">
+                    <f:for as="item" each="{records}" iteration="iterator">
+                        <li class="list__item slide slide-{iterator.index + 1}">
+                            <f:if condition="{item.data.link}">
+                                <f:then>
+                                    <f:link.typolink class="item__wrapper" parameter="{item.data.link}">
+                                        <f:if condition="{item.files}">
+                                            <div class="item__image">
+                                                <div class="image__wrapper">
+                                                    <img src="{f:uri.image(image: item.files.0)}">
+                                                </div>
+                                            </div>
+                                        </f:if>
+                                        <div class="item__content">
+                                            <f:if condition="{item.data.title}">
+                                                <div class="content__title">{item.data.title}</div>
+                                            </f:if>
+                                            <f:if condition="{item.data.bodytext}">
+                                                <div class="content__text">
+                                                    <f:format.html><f:format.crop maxCharacters="250">{item.data.bodytext}</f:format.crop></f:format.html>
+                                                </div>
+                                            </f:if>
+                                        </div>
+                                    </f:link.typolink>
+                                </f:then>
+                                <f:else>
+                                    <div class="item__wrapper">
+                                        <f:if condition="{item.files}">
+                                            <div class="item__image">
+                                                <div class="image__wrapper">
+                                                    <img src="{f:uri.image(image: item.files.0)}">
+                                                </div>
+                                            </div>
+                                        </f:if>
+                                        <div class="item__content">
+                                            <f:if condition="{item.data.title}">
+                                                <div class="content__title">{item.data.title}</div>
+                                            </f:if>
+                                            <f:if condition="{item.data.bodytext}">
+                                                <div class="content__text">
+                                                    <f:format.html>{item.data.bodytext}</f:format.html>
+                                                </div>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </f:else>
+                            </f:if>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:if>
+            <f:comment>
+                <f:render partial="Carousel/Control/Indicator" arguments="{_all}" />
+                <f:render partial="Carousel/Control/Control" arguments="{_all}" />
+            </f:comment>
+        </div>
+    </div>
+</f:section>
+
+<script>
+
+</script>

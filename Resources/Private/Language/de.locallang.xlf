@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"  product-name="government_package">
+        <header/>
+        <body>
+            <trans-unit id="share.title">
+                <source>Choose where you want to share the article</source>
+                <target>Wählen Sie aus, wo Sie den Artikel teilen möchten</target>
+            </trans-unit>
+            <trans-unit id="share.copy">
+                <source>Copy</source>
+                <target>Kopiëren</target>
+            </trans-unit>
+            <trans-unit id="share.copy_success">
+                <source>Successfully copied</source>
+                <target>Erfolgreich kopiert</target>
+            </trans-unit>
+            <trans-unit id="share.subtitle">
+                <source>visit us on</source>
+                <target>Besuchen Sie uns auf</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,14 @@
+@import 'EXT:solr/Configuration/TypoScript/Solr/setup.typoscript'
+
+plugin.tx_solr.index.queue.pages >
+
+plugin.tx_solr.view.widget.TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.10 = EXT:government_package/Resources/Private/Extensions/Solr/Templates
+
+plugin.tx_solr_PiSearch_Search.settings.renderMode = footer
+
+
+@import 'EXT:government_package/Configuration/TypoScript/Extensions/Solr/pages.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/Extensions/Solr/news.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/Extensions/Solr/news_main.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/Extensions/Solr/solr_faceting.typoscript'
+@import 'EXT:government_package/Configuration/TypoScript/Extensions/Solr/solr_sorting.typoscript'

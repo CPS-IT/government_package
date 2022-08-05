@@ -1,0 +1,356 @@
+.news-list-view {
+  .article.articletype-0 {
+    padding: 20px;
+    background-color: $news-article-bg-color;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-up(sm) {
+      display: grid;
+      column-gap: 20px;
+      grid-template-areas:
+        'img header'
+        'img text'
+        'img footer';
+      grid-template-columns: 180px auto;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: 380px auto;
+    }
+
+    .header {
+      grid-area: header;
+
+      span {
+        font-size: 18px;
+        line-height: 24px;
+        color: $news-title-color;
+
+        @include media-breakpoint-up(sm) {
+          font-size: 21px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .news-img-wrap {
+      grid-area: img;
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+        display: block;
+
+        img {
+          max-width: 180px;
+          height: auto;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        img {
+          max-width: 380px;
+        }
+      }
+    }
+
+    .teaser-text {
+      grid-area: text;
+      color: $news-subtitle-color;
+
+      p {
+        font-size: 15px;
+        line-height: 21px;
+
+        &:last-child {
+          margin-bottom: 5px;
+        }
+
+        @include media-breakpoint-up(sm) {
+          font-size: 16px;
+        }
+      }
+
+      .more {
+        color: $news-link-color !important;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    .footer {
+      grid-area: footer;
+
+      p {
+        display: flex;
+        column-gap: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .news-list-category {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .f3-widget-paginator {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+
+    li {
+      list-style: none;
+      padding: 10px 20px;
+      border: 2px solid $pagination-color;
+      transition: all ease-in-out 0.2s;
+
+      &, a {
+        color: $pagination-color !important;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      &.next, &.previous {
+        background-color: $pagination-color;
+        color: $pagination-secondary-color !important;
+        padding: 10px 15px;
+        max-width: 52px;
+        min-width: 52px;
+
+        @include media-breakpoint-up(md) {
+          max-width: unset;
+          min-width: 108px;
+          padding: 10px;
+        }
+
+        a {
+          font-weight: 500;
+          color: $pagination-secondary-color !important;
+          text-transform: capitalize;
+          display: flex;
+          flex-wrap: nowrap;
+          column-gap: 10px;
+          overflow: hidden;
+        }
+      }
+
+      &.previous a {
+        @include media-breakpoint-up(md) {
+          justify-content: center;
+        }
+
+        &:before {
+          content: '\2190';
+        }
+      }
+
+      &.next a {
+        justify-content: flex-end;
+
+        @include media-breakpoint-up(md) {
+          justify-content: center;
+        }
+
+        &:after {
+          content: '\2192';
+        }
+      }
+
+      &.current {
+        background-color: $pagination-color;
+        color: $pagination-secondary-color !important;
+      }
+
+      &:hover {
+        background-color: $pagination-hover-color;
+        color: $pagination-secondary-color;
+
+        a {
+          color: $pagination-secondary-color !important;
+        }
+      }
+
+      &.current:hover {
+        background-color: $pagination-color;
+        color: $pagination-secondary-color;
+      }
+    }
+  }
+}
+
+.news-single {
+  .article {
+    .header {
+      position: relative;
+      z-index: 1;
+      background-color: $news-header-bg-color;
+      padding: 12px 15px 20px 15px;
+      box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+      border-radius: 3px;
+      text-align: center;
+      margin: -50px auto 30px;
+
+      @include media-breakpoint-up(sm) {
+        margin-top: -100px;
+        width: calc(100% - 80px);
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding: 25px 75px;
+      }
+
+      &__title {
+        margin-top: 10px;
+
+        h1 {
+          color: $news-title-color;
+          font-weight: 500 !important;
+        }
+      }
+
+      &__details {
+        display: flex;
+        flex-direction: column;
+        color: $news-subtitle-color;
+      }
+
+      .news-list-category {
+        text-transform: uppercase;
+      }
+    }
+
+    .footer {
+      display: flex;
+      align-items: flex-end;
+
+      p {
+        display: flex;
+        flex-direction: column;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .text-wrap {
+      margin: 0 auto;
+
+      @include media-breakpoint-up(sm) {
+        width: calc(100% - 80px);
+      }
+    }
+
+    .teaser-text {
+      margin-top: 20px;
+    }
+
+    .news-img-wrap {
+      width: 100vw;
+      margin-left: -20px;
+
+      @include media-breakpoint-up(sm) {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .mediaelement-image {
+        @include ratio(2 1);
+
+        @include media-breakpoint-up(lg) {
+          @include ratio(2 0.75);
+        }
+      }
+
+      img {
+        min-width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .news-text-wrap {
+      a {
+        font-weight: bold;
+        color: $news-link-color !important;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 2px;
+
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          background: url('https://www.personalausweisportal.de/SiteGlobals/Frontend/Images/icons/sprite.svg?__blob=normal&v=8') no-repeat -1748px -1208px;
+          margin-right: 3px;
+        }
+      }
+    }
+
+    .news-backlink-wrap {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $news-btn-border-color;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+      }
+
+      a {
+        font-size: 13px;
+        font-weight: bold;
+        color: $news-link-color !important;
+        background-color: $news-white-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.8px;
+        padding: 12px 30px;
+        border: 1px solid $news-btn-border-color;
+        border-radius: 4px;
+        transition: background-color .2s ease-in-out;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 14px;
+        position: relative;
+        z-index: 10;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 12px;
+          background: url('https://www.personalausweisportal.de/SiteGlobals/Frontend/Images/icons/sprite.svg?__blob=normal&v=8') no-repeat -833px -1652px;
+        }
+
+        &:hover {
+          background-color: $news-link-color;
+          color: $news-white-color !important;
+
+          &:after {
+            background: url('https://www.personalausweisportal.de/SiteGlobals/Frontend/Images/icons/sprite.svg?__blob=normal&v=8') no-repeat -939px -1652px;
+          }
+        }
+      }
+    }
+
+    .shariff {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.card-group-element {
+  .card {
+    .card-img-top {
+      a {
+        display: block;
+        @include ratio(16 9);
+
+        picture {
+          height: 100%;
+        }
+
+        img {
+          height: 100% !important;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .card-title {
+      color: $bg-light-title-color !important;
+      font-weight: 500;
+      text-decoration: none;
+
+      & a {
+        color: $bg-light-title-color !important;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .card-subtitle {
+      font-weight: 400;
+    }
+  }
+}
+
+.frame-background-primary {
+  .card {
+    a:not([class]) {
+      color: $link-color !important;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

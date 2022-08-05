@@ -1,0 +1,15 @@
+[applicationContext == "Development"]
+    config {
+        compressJs = 0
+        compressCss = 0
+        concatenateJs = 0
+        concatenateCss = 0
+        contentObjectExceptionHandler = 0
+        admPanel = 1
+        no_cache = 1
+        contentObjectExceptionHandler = 0
+    }
+    config {
+        contentObjectExceptionHandler = 0
+    }
+[global]

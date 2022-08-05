@@ -1,0 +1,25 @@
+page {
+    fluidtemplate {
+        # cat=bootstrap package: templates/100/100; type=string; label=Layout Root Path: Path to layouts
+        layoutRootPath = EXT:government_package/Resources/Private/Layouts/Page/
+        # cat=bootstrap package: templates/100/110; type=string; label=Partial Root Path: Path to partials
+        partialRootPath = EXT:government_package/Resources/Private/Partials/Page/
+        # cat=bootstrap package: templates/100/120; type=string; label=Template Root Path: Path to templates
+        templateRootPath = EXT:government_package/Resources/Private/Templates/Page/
+    }
+    theme {
+        meta{
+            footerValue =
+            topValue =
+        }
+        navigation {
+            # cat=bootstrap package: navigation/151/100; type=options[Default=default, Default Transition=default-transition, Inverse=inverse, Inverse Transition=inverse-transition]; label=Navigation Style
+            style = default
+            type= top
+        }
+    }
+    logo {
+        file = EXT:government_package/Resources/Public/Icons/logo.png
+        fileInverted = EXT:government_package/Resources/Public/Icons/logo-sticky.svg
+    }
+}

@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.government {
+    elements {
+        government_menu_boxes {
+            iconIdentifier = government
+            title = LLL:EXT:government_package/Resources/Private/Language/Backend.xlf:content_element.government_menu_boxes
+            description = LLL:EXT:government_package/Resources/Private/Language/Backend.xlf:content_element.government_menu_boxes.description
+            tt_content_defValues {
+                CType = government_menu_boxes
+            }
+        }
+    }
+    show := addToList(government_menu_boxes)
+}

@@ -1,0 +1,13 @@
+page.theme.socialmedia {
+    channels {
+        youtube.url = https://www.youtube.de/
+        twitter.url = https://twitter.de/
+    }
+}
+page {
+    theme {
+        copyright {
+            text = © My Government Institution,
+        }
+    }
+}

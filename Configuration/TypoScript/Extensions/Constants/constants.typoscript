@@ -1,0 +1,9 @@
+@import 'EXT:news/Configuration/TypoScript/constants.typoscript'
+plugin.tx_news {
+    view {
+        templateRootPath = EXT:government_package/Resources/Private/Extensions/News/Templates/
+        partialRootPath = EXT:government_package/Resources/Private/Extensions/News/Partials/
+        layoutRootPath = EXT:government_package/Resources/Private/Extensions/News/Layouts/
+    }
+    settings.cssFile =
+}

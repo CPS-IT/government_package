@@ -1,0 +1,200 @@
+$relevant-sorting-icon: url("data:image/svg+xml,%3Csvg width='32px' height='32px' viewBox='0 0 32 32' id='icon' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eimprove-relevance%3C/title%3E%3Cpolygon points='22 26.59 19.41 24 18 25.41 22 29.41 30 21.41 28.59 20 22 26.59'/%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Cpath d='M16,22a6,6,0,1,1,6-6A6.0066,6.0066,0,0,1,16,22Zm0-10a4,4,0,1,0,4,4A4.0045,4.0045,0,0,0,16,12Z'/%3E%3Cpath d='M28,16A12,12,0,1,0,16,28V26A10,10,0,1,1,26,16Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+$date-sorting-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 59.005 59.005' style='enable-background:new 0 0 59.005 59.005;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M33.003,35.002l-0.002,24l24,0.002l0.002-24L33.003,35.002z M55.001,57.004l-9-0.001l0.001-12.586l4.293,4.293l1.414-1.414 l-6.706-6.708l-6.708,6.706l1.414,1.414l4.293-4.293l-0.001,12.586l-9-0.001l0.002-20l20,0.002L55.001,57.004z'/%3E%3Cpath d='M54.006,5.004c0-0.552-0.448-1-1-1l-5,0l0-3c0-0.553-0.448-1-1-1l-7-0.001c-0.552,0-1,0.447-1,1l0,3l-22-0.002l0-3 c0-0.553-0.448-1-1-1L9.007,0c-0.552,0-1,0.447-1,1l0,3l-5,0c-0.552,0-1,0.448-1,1l-0.001,9l52,0.005L54.006,5.004z M15.006,5.001 l0,3l-5,0l0-3l0-3l5,0L15.006,5.001z M46.006,5.004l0,3l-5,0l0-3l0-3l5,0L46.006,5.004z'/%3E%3Cpath d='M54.004,30.182l0.001-13.178c0-0.553-0.448-1-1-1l-50-0.005c-0.552,0-1,0.447-1,1l-0.004,39c0,0.553,0.448,1,1,1l27,0.003 l0.002-25l24,0.002L54.004,30.182z M17.002,50.001l-8-0.001l0.001-8l8,0.001L17.002,50.001z M17.003,40.001l-8-0.001l0.001-8 l8,0.001L17.003,40.001z M17.004,30.001l-8-0.001l0.001-8l8,0.001L17.004,30.001z M27.002,50.002l-7-0.001l-1,0l0.001-8l8,0.001 L27.002,50.002z M27.003,40.002l-8-0.001l0.001-8l8,0.001L27.003,40.002z M27.004,30.002l-8-0.001l0.001-8l1,0l7,0.001 L27.004,30.002z M37.004,30.003l-8-0.001l0.001-8l7,0.001l1,0L37.004,30.003z M47.004,30.004l-4.515,0l-3.485,0l0.001-8l8,0.001 L47.004,30.004z'/%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+
+.tx_solr {
+  .card-header {
+    background-color: $solr-color-primary;
+    color: $white-color;
+
+    a {
+      color: $white-color !important;
+
+      &:hover {
+        color: $white-color !important;
+      }
+    }
+  }
+
+  .row {
+    & > * {
+      padding: 0;
+    }
+
+    .row {
+      min-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+
+      @include media-breakpoint-up(md) {
+        margin-left: 20px !important;
+      }
+
+      .tx-solr-search-form {
+        .tx-solr-q {
+          flex-grow: 1;
+        }
+      }
+
+      .row {
+        margin-left: 0 !important;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+
+        .col-4 {
+          margin-left: auto;
+        }
+
+        .col-8, .col-4 {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  #results-per-page {
+    .input-group {
+      justify-content: flex-end;
+      align-items: center;
+      column-gap: 10px;
+
+      .form-select {
+        max-width: 100px;
+      }
+    }
+  }
+
+  .solr-ajaxified {
+    color: $solr-color-primary !important;
+  }
+
+  .facet-result-count {
+    background: $solr-color-primary !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tx-solr-search-form {
+    @include media-breakpoint-up(lg) {
+      width: 100% !important;
+    }
+  }
+
+  .solr-pagination {
+    margin-top: 20px;
+  }
+
+  .list-group {
+    &-item.search-result {
+      border: none !important;
+      padding: 10px;
+      background-color: $solr-bg-color;
+      margin-bottom: 20px;
+
+      .row {
+        align-items: flex-start!important;
+        margin-bottom: 10px;
+        row-gap: 10px !important;
+      }
+
+      .results-topic {
+        a {
+          color: $solr-title-color !important;
+        }
+      }
+
+      .result-content {
+        color: $solr-font-color;
+      }
+
+      .col-md-10 {
+        width: auto !important;
+      }
+
+      .col-md-2 {
+        width: auto;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .col-lg-2.hidden-xs {
+    width: 100% !important;
+  }
+
+  #tx-solr-sorting {
+    background-color: $solr-color-primary;
+    color: $solr-color-secondary;
+    padding: 8px 12px 11px 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 25px;
+
+    @include media-breakpoint-up(md) {
+      column-gap: 40px;
+    }
+
+    .sorting__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+
+      @include media-breakpoint-up(md) {
+        column-gap: 25px;
+      }
+
+      .list__item {
+        height: 25px;
+      }
+
+      .item__link {
+        color: $solr-color-secondary !important;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 2px;
+        font-weight: 300;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          background-size: 100% 100%;
+          filter: invert(100%);
+        }
+
+        &.active {
+          font-weight: 500;
+          cursor: default;
+          text-decoration: underline;
+          pointer-events: none;
+        }
+      }
+
+      .item--relevance {
+        &::before {
+          background-image: escape-svg($relevant-sorting-icon);
+        }
+      }
+
+      .item--date {
+        &::before {
+          width: 19px;
+          height: 19px;
+          background-image: escape-svg($date-sorting-icon);
+          margin-right: 2px;
+        }
+      }
+    }
+
+    .sorting__label {
+      font-weight: 300;
+    }
+  }
+}

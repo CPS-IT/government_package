@@ -1,0 +1,17 @@
+.timeline-item {
+  .gallery-item {
+    .image {
+      display: block;
+      @include ratio(16 9);
+
+      img {
+        height: 100% !important;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .timeline-item-header-headline {
+    font-weight: 500;
+  }
+}

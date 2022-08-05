@@ -1,0 +1,25 @@
+tt_content.government_teaser_links =< lib.contentElement
+tt_content.government_teaser_links {
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = TeaserLinks
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+        }
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tx_governmentpackage_link_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+        }
+
+    }
+}

@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.government {
+    elements {
+        government_teaser_links {
+            iconIdentifier = government
+            title = LLL:EXT:government_package/Resources/Private/Language/Backend.xlf:content_element.government_teaser_links
+            description = LLL:EXT:government_package/Resources/Private/Language/Backend.xlf:content_element.government_teaser_links.description
+            tt_content_defValues {
+                CType = government_teaser_links
+            }
+        }
+    }
+    show := addToList(government_teaser_links)
+}

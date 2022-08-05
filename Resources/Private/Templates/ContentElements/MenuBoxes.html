@@ -1,0 +1,49 @@
+<f:layout name="Simple" />
+<f:section name="Main">
+    <div class="menu-boxes">
+        <f:if condition="{records}">
+            <div class="menu-boxes__items-list">
+                <f:for as="item" each="{records}">
+                    <div class="list__item">
+                        <f:if condition="{item.files.0}">
+                            <div class="item__image">
+                                <f:if condition="{item.data.link}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{item.data.link}" class="image__wrapper">
+                                            <img src="{f:uri.image(image: item.files.0)}">
+                                        </f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        <div class="image__wrapper">
+                                            <img src="{f:uri.image(image: item.files.0)}">
+                                        </div>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </f:if>
+                        <div class="item__content">
+                            <f:if condition="{item.data.title}">
+                                <h4 class="content__title">
+                                    <f:if condition="{item.data.link}">
+                                        <f:then>
+                                            <f:link.typolink parameter="{item.data.link}" class="content__title">
+                                                <span class="link__icon"></span>
+                                                <span class="link__text">{item.data.title}</span>
+                                            </f:link.typolink>
+                                        </f:then>
+                                        <f:else>{item.data.title}</f:else>
+                                    </f:if>
+                                </h4>
+                            </f:if>
+                            <f:if condition="{item.data.bodytext}">
+                                <div class="content__text">
+                                    <f:format.html>{item.data.bodytext}</f:format.html>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+    </div>
+</f:section>
