@@ -13,9 +13,6 @@
       "CPSIT\\GovernmentPackage\\": "Classes"
     }
   },
-  "replace": {
-    "government_package": "self.version"
-  },
   "extra": {
     "typo3/cms": {
       "extension-key": "government_package"
