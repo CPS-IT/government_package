@@ -16,9 +16,10 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'constraints' => [
         'depends' => [
-            'news' => '9.4.0-0.0.0.',
-            'bootstrap_package' => '12.0.0-0.0.0.',
-            'rx_shariff' => '14.0.0-0.0.0.',
+            'typo3' => '11.5.0-11.5.99',
+            'news' => '9.4.0-9.99.99',
+            'bootstrap_package' => '12.0.0-12.99.99',
+            'rx_shariff' => '14.0.0-14.99.99',
         ],
     ],
 ];
