@@ -19,7 +19,7 @@ page {
         }
     }
     logo {
-        file = EXT:government_package/Resources/Public/Icons/logo.png
+        file = EXT:government_package/Resources/Public/Icons/dummy-logo.png
         fileInverted = EXT:government_package/Resources/Public/Icons/logo-sticky.svg
     }
 }
