@@ -6,7 +6,7 @@
     "bk2k/bootstrap-package": "^12.0",
     "georgringer/news":"^9.4",
     "reelworx/rx-shariff":"^14",
-    "apache-solr-for-typo3/solr": "11.5.0-rc-2"
+    "apache-solr-for-typo3/solr": "^11.5@RC"
   },
   "autoload": {
     "psr-4": {
