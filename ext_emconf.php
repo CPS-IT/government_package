@@ -4,12 +4,9 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'TYPO3 Government package',
     'description' => 'Main website configuration',
     'category' => 'distribution',
-    'author' => 'powerful. systems. CPS GmbH',
+    'author' => 'coding. powerful. systems. CPS GmbH',
     'author_email' => '	typo3-government-package@cps-it.de',
-    'state' => 'alfa',
-    'internal' => '',
-    'uploadfolder' => 1,
-    'createDirs' => '',
+    'state' => 'alpha',
     'clearCacheOnLoad' => 1,
     'version' => '0.0.3',
     'autoload' => [
@@ -22,9 +19,6 @@ $EM_CONF[$_EXTKEY] = [
             'news' => '9.4.0-0.0.0.',
             'bootstrap_package' => '12.0.0-0.0.0.',
             'rx_shariff' => '14.0.0-0.0.0.',
-        ],
-        'conflicts' => [],
-        'suggests' => [
         ],
     ],
 ];
